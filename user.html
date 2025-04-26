@@ -1,0 +1,268 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Stitching enhances</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="i===mage/x-icon" href="static/assets/img/favicon.ico">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="static/assets/css/slicknav.css">
+    <link rel="stylesheet" href="static/assets/css/flaticon.css">
+    <link rel="stylesheet" href="static/assets/css/progressbar_barfiller.css">
+    <link rel="styl esheet" href="static/assets/css/gijgo.css">
+    <link rel="stylesheet" href="static/assets/css/animate.min.css">
+    <link rel="stylesheet" href="static/assets/css/animated-headline.css">
+    <link rel="stylesheet" href="static/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="static/assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="static/assets/css/themify-icons.css">
+    <link rel="stylesheet" href="static/assets/css/slick.css">
+    <link rel="stylesheet" href="static/assets/css/nice-select.css">
+    <link rel="stylesheet" href="static/assets/css/style.css">
+
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-image: url("static/assets/images/loginbg.jpg"); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-attachment: fixed;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4); /* Semi-transparent dark overlay */
+        }
+        .container {
+            position: relative;
+            background: rgba(255, 255, 255, 0.9); /* Light white background for better readability */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 350px;
+        }
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #333;
+        }
+        input, button {
+            width: 90%;
+            margin: 12px 0;
+            padding: 12px;
+            border-radius: 10px;
+            border: 2px solid #a77028de;
+            background: transparent;
+            color: #070707;
+            font-size: 1rem;
+        }
+        input::placeholder {
+            color: #090909;
+        }
+        input:focus {
+            border-color: #a72828;
+            outline: none;
+        }
+        button {
+            background: #a77028de;
+            border: 2px solid #a77028de;
+            color: black;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #882121;
+        }
+        .register-link {
+            margin-top: 10px;
+            color: #a72828;
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        .register-link:hover {
+            color: #213988;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            input, button {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="overlay">
+           <header style="background-color:white;">
+        <!-- Header Start -->
+        <div class="header-area header_area">
+            <div class="main-header">
+             <div class="header-bottom header-sticky">
+                <!-- Logo -->
+                 <div class="logo">
+                    <a href="index.html"><img src="static/assets/img2/logo1.jpg" width="110px" alt=""></a>
+                </div>
+                <div class="header-left  d-flex f-right align-items-center">
+                    <!-- Main-menu -->
+                    <div class="main-menu f-right d-none d-lg-block">
+                        <nav>
+                            <ul id="navigation">
+                               {% include 'menu/home.html'  %}
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- left Btn -->
+
+                </div>
+                <!-- Mobile Menu -->
+                <div class="col-12">
+                    <div class="mobile_menu d-block d-lg-none"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+</header>
+
+
+    </div> <!-- Overlay for better contrast -->
+    <div class="container" id="loginContainer">
+        <h2>User Login</h2>
+        <form action="/userlogin" method="post">
+        <input type="text"  name="uname" placeholder="Enter Username" required>
+        <input type="password"  name="password" placeholder="Enter Password" required>
+        <button type="submit">Login</button><br>
+          <button type="reset">Reset</button><br>
+        <span class="register-link" onclick="showRegister()">New user? Register here</span>
+        </form>
+    </div>
+
+    <div class="container" id="registerContainer" style="display: none;">
+
+        <h2>New User</h2>
+        <form method="post" action="/USER">
+        <input type="text" name="uname"  placeholder="Enter Username" required>
+             <input type="text" name="age"  placeholder="Enter Age" required>
+
+           <label style="color:black;"> <input type="radio" name="gender" value="Male" required>Male</label><label style="color:black;"><input  name="gender" type="radio" value="Female"  required>Female</label>
+
+
+        <input type="text" name="mobile" placeholder="Enter Phone Number" maxlength="10" required>
+        <input type="email" name="email"  placeholder="Enter Email id" required>
+        <input type="password" name="password"  placeholder="Enter Password" required>
+        <button type="submit">Submit</button><br>
+            <button type="reset">Reset</button><br>
+        <span class="register-link" onclick="showLogin()">Already have an account? Login here</span>
+            </form>
+    </div>
+
+    <script>
+        const ADMIN_USERNAME = "admin";
+        const ADMIN_PASSWORD = "admin123";
+
+        function showRegister() {
+            document.getElementById("loginContainer").style.display = "none";
+            document.getElementById("registerContainer").style.display = "block";
+        }
+
+        function showLogin() {
+            document.getElementById("registerContainer").style.display = "none";
+            document.getElementById("loginContainer").style.display = "block";
+        }
+
+        function signup() {
+            const username = document.getElementById('registerUsername').value;
+            const phone = document.getElementById('registerPhone').value;
+            const password = document.getElementById('registerPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (!username || !phone || !password || !confirmPassword) {
+                alert("Please fill out all fields.");
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return;
+            }
+
+            let users = JSON.parse(localStorage.getItem("users")) || {};
+            if (users[username]) {
+                alert("Username already exists!");
+                return;
+            }
+
+            let role = username === ADMIN_USERNAME && password === ADMIN_PASSWORD ? "admin" : "user";
+            users[username] = { phone: phone, password: password, role: role };
+            localStorage.setItem("users", JSON.stringify(users));
+            alert("Signup successful! Now login.");
+            showLogin();
+        }
+
+        function login() {
+            const username = document.getElementById('loginUsername').value;
+            const password = document.getElementById('loginPassword').value;
+
+            if (!username || !password) {
+                alert("Please enter both username and password.");
+                return;
+            }
+
+            let users = JSON.parse(localStorage.getItem("users")) || {};
+
+            if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
+                alert("Admin Login successful!");
+                window.location.href = "appointment.html";
+                return;
+            }
+
+            if (users[username] && users[username].password === password) {
+                alert("Login successful!");
+                window.location.href = "index2.html";
+            } else {
+                alert("Invalid username or password!");
+            }
+        }
+    </script>
+
+<!-- Flash Notification -->
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <script>
+                var messages = {{ messages | safe }};
+                for (var i=0; i<messages.length; i++) {
+                alert(messages[i]);
+                }
+             </script>
+            {% endif %}
+            {% endwith %}
+        <!-- Flash Notification -->
+</body>
+</html>

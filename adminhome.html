@@ -1,0 +1,232 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Stitching enhances</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="static/assets/img/favicon.ico">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="static/assets/css/slicknav.css">
+    <link rel="stylesheet" href="static/assets/css/flaticon.css">
+    <link rel="stylesheet" href="static/assets/css/progressbar_barfiller.css">
+    <link rel="stylesheet" href="static/assets/css/gijgo.css">
+    <link rel="stylesheet" href="static/assets/css/animate.min.css">
+    <link rel="stylesheet" href="static/assets/css/animated-headline.css">
+    <link rel="stylesheet" href="static/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="static/assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="static/assets/css/themify-icons.css">
+    <link rel="stylesheet" href="static/assets/css/slick.css">
+    <link rel="stylesheet" href="static/assets/css/nice-select.css">
+    <link rel="stylesheet" href="static/assets/css/style.css">
+</head>
+<body>
+
+    <header>
+        <!-- Header Start -->
+        <div class="header-area header_area">
+            <div class="main-header">
+             <div class="header-bottom header-sticky">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html"><img src="static/assets/img/logo/logo.png" alt=""></a>
+                </div>
+                <div class="header-left  d-flex f-right align-items-center">
+                    <!-- Main-menu -->
+                    <div class="main-menu f-right d-none d-lg-block">
+                        <nav> 
+                            <ul id="navigation">                                                                                                                                     
+ {% include 'menu/admin.html'  %}
+                            </ul>
+                        </nav>
+                    </div>
+
+                </div>          
+                <!-- Mobile Menu -->
+                <div class="col-12">
+                    <div class="mobile_menu d-block d-lg-none"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+</header>
+<main>
+    <!--? slider Area Start-->
+    <div class="slider-area position-relative">
+        <div class="slider-active">
+            <!-- Single Slider -->
+            <div class="single-slider position-relative hero-overly slider-height2  d-flex align-items-center" data-background="static/assets/img/hero/h1_hero.png">
+                <div class="container">
+                 <div class="row">
+                     <div class="col-xl-6 col-lg-6">
+                        <div class="hero-caption hero-caption2">
+                            <img src="static/assets/img/hero/hero-icon.png" alt="" data-animation="zoomIn" data-delay="1s">
+                            <h2 data-animation="fadeInLeft" data-delay=".4s">Admin</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Left img -->
+            <div class="hero-img hero-img2">
+                <img src="static/assets/img/hero/h2_hero2.png" alt=""  data-animation="fadeInRight" data-transition-duration="5s">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- slider Area End-->
+
+
+</main>
+
+
+<div class="middle">
+    <h1 align="center">User Details:-</h1>
+    <div class="table-container" align="center">
+        <table class="styled-table" align="center">
+            <thead>
+                <tr>
+                    <th align="center">id</th>
+                    <th align="center">Username</th>
+                    <th align="center">Age</th>
+                    <th align="center">Gender</th>
+                    <th align="center">Mobile</th>
+                    <th align="center">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in data %}
+                    <tr>
+                        <td align="center">{{item[0]}}</td>
+                        <td align="center">{{item[1]}}</td>
+                        <td align="center">{{item[2]}}</td>
+                        <td align="center">{{item[3]}}</td>
+                        <td align="center">{{item[4]}}</td>
+                        <td align="center">{{item[5]}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Add the following style in the <style> tag -->
+<style>
+    .styled-table {
+        width: 80%;
+        margin: 25px 0;
+        border-collapse: collapse;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .styled-table th,
+    .styled-table td {
+        padding: 12px 15px;
+        text-align: center;
+    }
+
+    .styled-table th {
+        background-color: #6c4f3d;
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .styled-table td {
+        background-color: #f8f8f8;
+        color: #333;
+        font-size: 14px;
+        border-top: 1px solid #ddd;
+    }
+
+    .styled-table tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .styled-table tbody tr:hover {
+        background-color: #f1a7a7;
+        transform: scale(1.02);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .styled-table tbody tr:active {
+        transform: scale(1.03);
+    }
+</style>
+
+
+
+<footer>
+
+        <!-- Footer Start-->
+
+
+
+                        <div class="col-xl-12 ">
+                            <div class="footer-copy-right text-right">
+                                <center><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                  Copyright Stitching enhances &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</a>
+                                  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></center>
+
+                              </div>
+                          </div>
+
+
+          <!-- Footer End-->
+          <!-- Map -->
+
+
+</footer>
+<!-- Scroll Up -->
+
+
+<!-- JS here -->
+<script src="./static/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+<!-- Jquery, Popper, Bootstrap -->
+<script src="./static/assets/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="./static/assets/js/popper.min.js"></script>
+<script src="./static/assets/js/bootstrap.min.js"></script>
+<!-- Jquery Mobile Menu -->
+<script src="./static/assets/js/jquery.slicknav.min.js"></script>
+
+<!-- Jquery Slick , Owl-Carousel Plugins -->
+<script src="./static/assets/js/owl.carousel.min.js"></script>
+<script src="./static/assets/js/slick.min.js"></script>
+<!-- One Page, Animated-HeadLin -->
+<script src="./static/assets/js/wow.min.js"></script>
+<script src="./static/assets/js/animated.headline.js"></script>
+<script src="./static/assets/js/jquery.magnific-popup.js"></script>
+
+<!-- Date Picker -->
+<script src="./static/assets/js/gijgo.min.js"></script>
+<!-- Nice-select, sticky -->
+<script src="./static/assets/js/jquery.nice-select.min.js"></script>
+<script src="./static/assets/js/jquery.sticky.js"></script>
+<!-- Progress -->
+<script src="./static/assets/js/jquery.barfiller.js"></script>
+
+<!-- counter , waypoint,Hover Direction -->
+<script src="./static/assets/js/jquery.counterup.min.js"></script>
+<script src="./static/assets/js/waypoints.min.js"></script>
+<script src="./static/assets/js/jquery.countdown.min.js"></script>
+<script src="./static/assets/js/hover-direction-snake.min.js"></script>
+
+<!-- contact js -->
+<script src="./static/assets/js/contact.js"></script>
+<script src="./static/assets/js/jquery.form.js"></script>
+<script src="./static/assets/js/jquery.validate.min.js"></script>
+<script src="./static/assets/js/mail-script.js"></script>
+<script src="./static/assets/js/jquery.ajaxchimp.min.js"></script>
+
+<!-- Jquery Plugins, main Jquery -->	
+<script src="./static/assets/js/plugins.js"></script>
+<script src="./static/assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Stitching enhances</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="static/assets/img/favicon.ico">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="static/assets/css/slicknav.css">
+    <link rel="stylesheet" href="static/assets/css/flaticon.css">
+    <link rel="stylesheet" href="static/assets/css/progressbar_barfiller.css">
+    <link rel="stylesheet" href="static/assets/css/gijgo.css">
+    <link rel="stylesheet" href="static/assets/css/animate.min.css">
+    <link rel="stylesheet" href="static/assets/css/animated-headline.css">
+    <link rel="stylesheet" href="static/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="static/assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="static/assets/css/themify-icons.css">
+    <link rel="stylesheet" href="static/assets/css/slick.css">
+    <link rel="stylesheet" href="static/assets/css/nice-select.css">
+    <link rel="stylesheet" href="static/assets/css/style.css">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input, select, textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 98%;
+            align-items: center;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .checkbox-group, .radio-group {
+            margin-bottom: 15px;
+            columns: 2;
+            column-gap: normal;
+            display: inline-block;
+        }
+
+        .checkbox-group label, .radio-group label {
+            font-weight: normal;
+            margin-right: 10px;
+            display:inline-block;
+            margin-left: 5px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Header Start -->
+        <div class="header-area header_area">
+            <div class="main-header">
+             <div class="header-bottom header-sticky">
+                <!-- Logo -->
+                  <div class="logo">
+                    <a href="index.html"><img src="static/assets/img2/logo1.jpg" width="110px" alt=""></a>
+                </div>
+                <div class="header-left  d-flex f-right align-items-center">
+                    <!-- Main-menu -->
+                    <div class="main-menu f-right d-none d-lg-block">
+                        <nav>
+                            <ul id="navigation">
+ {% include 'menu/user.html'  %}
+                            </ul>
+                        </nav>
+                    </div>
+
+                </div>
+                <!-- Mobile Menu -->
+                <div class="col-12">
+                    <div class="mobile_menu d-block d-lg-none"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+</header>
+<div class="container">
+        <h2>Book an Appointment</h2>
+        <form method="post" action="/BOOKAPPOINTMENT">
+            <label for="firstName">Name *</label>
+            <input type="text" id="firstName" name="name" placeholder="Name" required>
+
+
+            <label for="phoneNumber">Phone Number *</label>
+            <input type="tel" id="phoneNumber" name="mobile" placeholder="Phone Number" required>
+
+
+
+
+
+            <label for="fullAddress">Full Address *</label>
+            <textarea id="fullAddress" name="address" rows="3" placeholder="Enter full address" required></textarea>
+
+            <label for="landMark">Land Mark</label>
+            <input type="text" id="landMark" name="landmark" placeholder="Land Mark">
+
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" placeholder="City">
+
+            <label for="pinCode">Pin Code *</label>
+            <input type="text" id="pinCode" name="pincode" placeholder="Pin Code" required>
+
+            <label for="buildingFloor">Building Floor *</label>
+            <select id="buildingFloor" name="buildingFloor" required>
+                <option value="">Select Floor</option>
+                <option value="Basement">Basement</option>
+                <option value="Ground">Ground</option>
+                <option value="1st Floor">1st Floor</option>
+                <option value="2nd Floor">2nd Floor</option>
+                <option value="3rd Floor">3rd Floor</option>
+            </select>
+
+            <label for="serviceType">Service Type *</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="kurti" name="serviceType" value="Kurti">
+                <label for="kurti">Kurti</label>
+
+                <input type="checkbox" id="Top" name="serviceType" value="Top">
+                <label for="Top">Top</label>
+
+                <input type="checkbox" id="Anarkali" name="serviceType" value="Anarkali">
+                <label for="Anarkali">Anarkali</label>
+
+                <input type="checkbox" id="Saree Emproiding" name="serviceType" value="Saree Emproiding">
+                <label for="Saree Emproiding">Saree Emproiding</label>
+
+                <input type="checkbox" id="Blouse" name="serviceType" value="Blouse">
+                <label for="Blouse">Blouse</label>
+
+                <input type="checkbox" id="Alter & Stitching" name="serviceType" value="Alter & Stitching ">
+                <label for="Alter & Stitching">Alter & Stitching </label>
+
+
+            </div>
+
+            <label for="appointmentDate">Select An Appointment *</label>
+            <input type="date" id="appointmentDate" name="appointmentDate" required>
+
+            <label for="appointmentTime">Select Appointment Time *</label>
+            <select id="appointmentTime" name="appointmentTime" required>
+                <option value="">Select Time Slot</option>
+                <option value="11:00 AM To 1:00 PM">11:00 AM To 1:00 PM</option>
+                <option value="1:00 PM To 3:00 PM">1:00 PM To 3:00 PM</option>
+                <option value="3:00 PM To 5:00 PM">3:00 PM To 5:00 PM</option>
+                <option value="5:00 PM To 7:00 PM">5:00 PM To 7:00 PM</option>
+                <option value="Full-Day Available">Full-Day Available</option>
+            </select>
+
+            <label for="garmentCount">How many Suit, Blouse or Other Items do you have to Stitch? *</label>
+            <select id="garmentCount" name="garmentCount" required>
+                <option value="">Select Quantity</option>
+                <option value="1 Garment  ">1 Garment </option>
+                  <option value="2 Garment  ">2 Garment </option>
+            </select>
+
+
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="3" placeholder="Enter any additional details"></textarea>
+
+            <input type="submit" value="Book Now">
+            <input type="reset" value="Clear">
+        </form>
+    </div>
+
+
+
+
+
+<footer>
+
+        <!-- Footer Start-->
+
+
+
+                        <div class="col-xl-12 ">
+                            <div class="footer-copy-right text-right">
+                                <center><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                  Copyright Stitching enhances &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</a>
+                                  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></center>
+
+                              </div>
+                          </div>
+
+
+          <!-- Footer End-->
+          <!-- Map -->
+
+
+</footer>
+<!-- Scroll Up -->
+
+
+<!-- JS here -->
+<script src="./static/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+<!-- Jquery, Popper, Bootstrap -->
+<script src="./static/assets/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="./static/assets/js/popper.min.js"></script>
+<script src="./static/assets/js/bootstrap.min.js"></script>
+<!-- Jquery Mobile Menu -->
+<script src="./static/assets/js/jquery.slicknav.min.js"></script>
+
+<!-- Jquery Slick , Owl-Carousel Plugins -->
+<script src="./static/assets/js/owl.carousel.min.js"></script>
+<script src="./static/assets/js/slick.min.js"></script>
+<!-- One Page, Animated-HeadLin -->
+<script src="./static/assets/js/wow.min.js"></script>
+<script src="./static/assets/js/animated.headline.js"></script>
+<script src="./static/assets/js/jquery.magnific-popup.js"></script>
+
+<!-- Date Picker -->
+<script src="./static/assets/js/gijgo.min.js"></script>
+<!-- Nice-select, sticky -->
+<script src="./static/assets/js/jquery.nice-select.min.js"></script>
+<script src="./static/assets/js/jquery.sticky.js"></script>
+<!-- Progress -->
+<script src="./static/assets/js/jquery.barfiller.js"></script>
+
+<!-- counter , waypoint,Hover Direction -->
+<script src="./static/assets/js/jquery.counterup.min.js"></script>
+<script src="./static/assets/js/waypoints.min.js"></script>
+<script src="./static/assets/js/jquery.countdown.min.js"></script>
+<script src="./static/assets/js/hover-direction-snake.min.js"></script>
+
+<!-- contact js -->
+<script src="./static/assets/js/contact.js"></script>
+<script src="./static/assets/js/jquery.form.js"></script>
+<script src="./static/assets/js/jquery.validate.min.js"></script>
+<script src="./static/assets/js/mail-script.js"></script>
+<script src="./static/assets/js/jquery.ajaxchimp.min.js"></script>
+
+<!-- Jquery Plugins, main Jquery -->
+<script src="./static/assets/js/plugins.js"></script>
+<script src="./static/assets/js/main.js"></script>
+<!-- Flash Notification -->
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <script>
+                var messages = {{ messages | safe }};
+                for (var i=0; i<messages.length; i++) {
+                alert(messages[i]);
+                }
+             </script>
+            {% endif %}
+            {% endwith %}
+        <!-- Flash Notification -->
+
+</body>
+</html>

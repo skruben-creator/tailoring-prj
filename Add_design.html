@@ -1,0 +1,615 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Stitching enhances</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="static/assets/img/favicon.ico">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="static/assets/css/slicknav.css">
+    <link rel="stylesheet" href="static/assets/css/flaticon.css">
+    <link rel="stylesheet" href="static/assets/css/progressbar_barfiller.css">
+    <link rel="stylesheet" href="static/assets/css/gijgo.css">
+    <link rel="stylesheet" href="static/assets/css/animate.min.css">
+    <link rel="stylesheet" href="static/assets/css/animated-headline.css">
+    <link rel="stylesheet" href="static/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="static/assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="static/assets/css/themify-icons.css">
+    <link rel="stylesheet" href="static/assets/css/slick.css">
+    <link rel="stylesheet" href="static/assets/css/nice-select.css">
+    <link rel="stylesheet" href="static/assets/css/style.css">
+     <style>
+    .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 50px;
+            max-width: 1200px;
+        }
+        .card {
+            background: rgb(136, 115, 115);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 80px 80px rgba(0, 0, 0, 0.2);
+        }
+        .card img {
+            width: 100%;
+            height: 300px;
+            display: block;
+        }
+  .nav1{
+    padding-left: 1px;
+  }
+  div.cat-icon:hover{
+        transform: rotate(20deg)
+      }
+      .btn:hover{
+        color: #111;
+    background: rgb(185, 125, 105);
+    box-shadow: 0 0 100px rgb(47, 175, 255)
+      }
+.popup{
+    position:fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+    display: none;
+}
+.popup .content{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0 green,0 blue,.5 alpha);
+}
+.signup-link{
+    color: #111;
+}
+.signup-link:hover{
+    text-decoration: underline;
+    color: brown;
+}
+.popup .content .form{
+    position: fixed;
+    width: 350px;
+    padding:10px 10px ;
+    background-color: aliceblue;
+    border-radius: 15px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,.9);
+    margin: 0px;
+}
+.popup .content .form strong{
+    font-size: 30px;
+    font-weight: 700;
+    color: #333;
+    margin: 2px 2px 2px 7px;
+    text-transform: uppercase;
+}
+.lg{
+    background-color: red;
+    color: white;
+    border-radius: 1px;
+width: 100px;}
+ .lg:hover{
+    outline:invert;
+    text-transform: uppercase;
+    font-size: 18px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,.1);
+    cursor: pointer;
+    transition: 0.8s;
+}
+.btn-close .close-button{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(230, 0, 0);
+    color: #111;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+.btn{
+    border-radius: 50px;
+}
+.btn1{
+    color: red;
+    background-color: black;
+}
+.gallery{
+    text-align: center;
+    padding: 1rem;
+    background-color: #4CAF50;
+    color: white;
+}
+.gallery1{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery1-item {
+    position: relative;
+    cursor: pointer;
+}
+
+.gallery1-item img {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.gallery-item1  img:hover {
+    transform: scale(1.05);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: red;
+}
+.hero-img{
+        height: 320px;
+        width: 640px;
+        background-clip: border-box;
+    }
+   </style>
+</head>
+<body>
+
+    <header>
+        <!-- Header Start -->
+        <div class="header-area header_area">
+            <div class="main-header">
+             <div class="header-bottom header-sticky">
+                <!-- Logo -->
+                   <div class="logo">
+                    <a href="index.html"><img src="static/assets/img2/logo1.jpg" width="110px" alt=""></a>
+                </div>
+
+                <div class="header-left  d-flex f-right align-items-center">
+                    <!-- Main-menu -->
+                    <div class="main-menu f-right d-none d-lg-block">
+                        <nav>
+                            <ul id="navigation">
+ {% include 'menu/user.html'  %}
+                            </ul>
+                        </nav>
+                    </div>
+
+                </div>
+                <!-- Mobile Menu -->
+                <div class="col-12">
+                    <div class="mobile_menu d-block d-lg-none"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+</header>
+<main>
+    <!--? slider Area Start-->
+    <div class="slider-area position-relative">
+        <div class="slider-active">
+            <!-- Single Slider -->
+            <div class="single-slider position-relative hero-overly slider-height2  d-flex align-items-center" data-background="static/assets/img/hero/h1_hero.png">
+                <div class="container">
+                 <div class="row">
+                     <div class="col-xl-6 col-lg-6">
+                        <div class="hero-caption hero-caption2">
+                            <img src="static/assets/img/hero/hero-icon.png" alt="" data-animation="zoomIn" data-delay="1s">
+                            <h2 data-animation="fadeInLeft" data-delay=".4s" style="font-size:30px;" >Design</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Left img -->
+            <div class="hero-img hero-img2">
+                <img src="static/assets/img/hero/h2_hero2.png" alt=""  data-animation="fadeInRight" data-transition-duration="5s">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- slider Area End-->
+
+
+</main>
+
+        <h1 class="gallery">AARI WORK</h1>
+        </div>
+        <section class=" bg-light py-5 skills-padding">
+         <div class="container">
+        <div class="card">
+            <img src="static/assets/aari/a1.jpeg" alt="Image 1">
+        </div>
+        <div class="card">
+            <img src="static/assets/aari/a2.jpg" alt="Image 2">
+
+        </div>
+       <div class="card">
+            <img src="static/assets/aari/a3.jpeg" alt="Image 2">
+
+        </div>
+             <div class="card">
+            <img src="static/assets/aari/a4.jpg" alt="Image 2">
+
+        </div>
+             <div class="card">
+            <img src="static/assets/aari/a5.jpeg" alt="Image 2">
+
+        </div>
+             <div class="card">
+            <img src="static/assets/aari/a6.jpeg" alt="Image 2">
+
+        </div>
+             <div class="card">
+            <img src="static/assets/aari/a7.jpeg" alt="Image 2">
+
+        </div>
+             <div class="card">
+            <img src="static/assets/aari/a9.jpeg" alt="Image 2">
+
+        </div>
+             <div class="card">
+            <img src="static/assets/aari/a10.jpg" alt="Image 2">
+
+        </div>
+             <div class="card">
+            <img src="static/assets/aari/a12.jpg" alt="Image 2">
+
+        </div>
+             <div class="card">
+            <img src="static/assets/aari/a11.jpg" alt="Image 2">
+
+        </div>
+             <div class="card">
+            <img src="static/assets/aari/a8.jpg" alt="Image 2">
+
+        </div>
+         </div>
+        </section>
+    <h1 class="gallery">EMBROIDERY WORK</h1>
+        </div>
+        <section class=" bg-light py-5 skills-padding ">
+            <div class="container">
+                <div class="card"><img src="static/assets/emb/e1.jpg" alt="Image 1"></div>
+            <div class="card"><img src="static/assets/emb/e2.jpg" alt="Image 2"></div>
+            <div class="card"><img src="static/assets/emb/e3.jpg" alt="Image 3"></div>
+        <div class="card"><img src="static/assets/emb/e4.jpg" alt="Image 3"></div>
+        <div class="card"><img src="static/assets/emb/e5.jpg" alt="Image 3"></div>
+        <div class="card"><img src="static/assets/emb/e6.jpg" alt="Image 3"></div>
+        <div class="card"><img src="static/assets/emb/e7.jpeg" alt="Image 3"></div>
+        <div class="card"><img src="static/assets/emb/e8.jpg" alt="Image 3"></div>
+        <div class="card"><img src="static/assets/emb/e9.jpeg" alt="Image 3"></div>
+        <div class="card"><img src="static/assets/emb/e10.jpg" alt="Image 3"></div>
+        <div class="card"><img src="static/assets/emb/e11.jpg" alt="Image 3"></div>
+                <div class="card"><img src="static/assets/emb/e12.jpeg" alt="Image 3"></div></div>
+            </div></section>
+ <h1 class="gallery">BLOUSE DESIGNS</h1>
+        </div>
+        <section class=" bg-light py-5 skills-padding ">
+         <div class="container">
+       <div class="card">
+            <img src="static/assets/blos/b1.jpg" alt="Image 1">
+
+        </div>
+        <div class="card">
+            <img src="static/assets/blos/b2.jpg" alt="Image 2">
+
+        </div>
+        <div class="card">
+            <img src="static/assets/blos/aari4.jpg" alt="Image 3">
+
+        </div>
+        <div class="card">
+            <img src="static/assets/blos/emb1.jpg" alt="Image 4">
+
+        </div>
+        <div class="card">
+            <img src="static/assets/blos/emb4.jpg" alt="Image 5">
+
+        </div>
+        <div class="card">
+            <img src="static/assets/images/2nd.jpg" alt="Image 6">
+
+        </div>
+        <div class="card">
+            <img src="static/assets/blouses/1000144074.jpg" alt="Image 6">
+
+        </div>
+        <div class="card">
+            <img src="static/assets/blouses/1000144075.jpg" alt="Image 6">
+
+        </div>
+        <div class="card">
+            <img src="static/assets/blouses/1000144079.jpg" alt="Image 6">
+
+        </div>
+        <div class="card">
+            <img src="static/assets/blouses/1000144112.jpg" alt="Image 6">
+
+        </div>
+        <div class="card">
+            <img src="static/assets/blouses/1000144229.jpg" alt="Image 6">
+
+        </div>
+        <div class="card">
+            <img src="static/assets/blouses/1000144258.jpg" alt="Image 6">
+
+        </div>
+        <div class="card">
+            <img src="static/assets/blouses/1000144277.jpg" alt="Image 6">
+
+        </div>
+        <div class="card">
+            <img src="static/assets/blouses/1000144281.jpg" alt="Image 6">
+
+        </div>
+        <div class="card">
+            <img src="static/assets/blouses/1000144285.jpg" alt="Image 6">
+
+        </div>
+        <div class="card">
+            <img src="static/assets/blouses/1000144287.jpg" alt="Image 6">
+
+        </div>
+        <div class="card">
+            <img src="static/assets/blouses/IMG-20240815-WA0026.jpg" alt="Image 6">
+
+        </div>
+        <div class="card">
+            <img src="static/assets/blouses/IMG-20240815-WA0046.jpg" alt="Image 6">
+
+        </div>
+        <div class="card">
+            <img src="static/assets/blouses/IMG-20240815-WA0047.jpg" alt="Image 6">
+
+        </div>
+        <div class="card">
+            <img src="static/assets/blouses/IMG-20240815-WA0053.jpg" alt="Image 6">
+
+        </div>
+        <div class="card">
+            <img src="static/assets/blouses/IMG-20240815-WA0054.jpg" alt="Image 6">
+
+        </div>
+        <div class="card">
+            <img src="static/assets/blouses/IMG-20240815-WA0066.jpg" alt="Image 6">
+
+        </div>
+        <div class="card">
+            <img src="static/assets/blouses/IMG-20240815-WA0079.jpg" alt="Image 6">
+
+        </div>
+        <div class="card">
+            <img src="static/assets/blouses/IMG-20240815-WA0093.jpg" alt="Image 6">
+
+        </div>
+        <div class="card">
+            <img src="static/assets/blouses/IMG-20240815-WA0199.jpg" alt="Image 6">
+
+        </div>
+        <div class="card">
+            <img src="static/assets/blouses/IMG-20240815-WA0133.jpg" alt="Image 6">
+
+        </div>
+        <div class="card">
+            <img src="static/assets/blouses/IMG-20240815-WA0207.jpg" alt="Image 6">
+
+        </div>
+    </div>
+        </section>
+      <h1 class="gallery">CHUDITHAR</h1>
+        </div>
+        <section class=" bg-light py-5 skills-padding">
+         <div class="container">
+              <div class="card">
+            <img src="static/assets/chudithar/c1.jpg" alt="Image 1">
+            </div>
+            <div class="card">
+                <img src="static/assets/chudithar/c2.jpg " alt="Image 1">
+            </div>
+            <div class="card">
+                <img src="static/assets/chudithar/c3.jpg "  alt="Image 3">
+            </div>
+            <div class="card">
+                <img src="static/assets/chudithar/c4.jpg " alt="Image 1">
+            </div>
+            <div class="card">
+                <img src="static/assets/chudithar/c5.jpg " alt="Image 1">
+            </div>
+            <div class="card">
+                <img src="static/assets/chudithar/c6.jpg " alt="Image 1">
+            </div>
+            <div class="card">
+                <img src="static/assets/chudithar/c7.jpg " alt="Image 1">
+            </div>
+            <div class="card">
+                <img src="static/assets/chudithar/c8.jpg " alt="Image 1">
+            </div>
+            <div class="card">
+                <img src="static/assets/chudithar/c9.jpg " alt="Image 1">
+            </div>
+            <div class="card">
+                <img src="static/assets/chudithar/c10.jpeg " alt="Image 1">
+            </div>
+            <div class="card">
+                <img src="static/assets/chudithar/c11.jpeg " alt="Image 1">
+            </div>
+            <div class="card">
+                <img src="static/assets/chudithar/c12.jpg " alt="Image 1">
+            </div>
+         </div></section>
+    <h1 class="gallery">BLOUSE DESIGNS</h1>
+        </div>
+        <section class=" bg-light  skills-padding ">
+            <div class="container">
+                <div class="card">
+                <img src="static/assets/childrens/c1.jpg" alt="Image 1">
+            </div>
+            <div class="card">
+                <img src="static/assets/childrens/c2.jpg " alt="Image 1">
+            </div>
+            <div class="card">
+                <img src="static/assets/childrens/c7.jpg "  alt="Image 3">
+            </div>
+            <div class="card">
+                <img src="static/assets/childrens/c4.jpg " alt="Image 1">
+            </div>
+            <div class="card">
+                <img src="static/assets/childrens/c5.jpg " alt="Image 1">
+            </div>
+            <div class="card">
+                <img src="static/assets/childrens/c6.jpg " alt="Image 1">
+            </div>
+            <div class="card">
+                <img src="static/assets/childrens/c7.jpg " alt="Image 1">
+            </div>
+            <div class="card">
+                <img src="static/assets/childrens/c8.jpg " alt="Image 1">
+            </div>
+            <div class="card">
+                <img src="static/assets/childrens/c9.jpg " alt="Image 1">
+            </div>
+            <div class="card">
+                <img src="static/assets/childrens/c10.jpg " alt="Image 1">
+            </div>
+            <div class="card">
+                <img src="static/assets/childrens/c11.jpg " alt="Image 1">
+            </div>
+            <div class="card">
+                <img src="static/assets/childrens/c12.jpg " alt="Image 1">
+            </div>
+            <div class="card">
+                <img src="static/assets/childrens/c13.jpg " alt="Image 1">
+            </div>
+            <div class="card">
+                <img src="static/assets/childrens/c14.jpg " alt="Image 1">
+            </div>
+            <div class="card">
+                <img src="static/assets/childrens/children.jpg " alt="Image 1">
+            </div></div>
+            </div></section>
+
+
+
+
+
+
+
+<footer>
+
+        <!-- Footer Start-->
+
+
+
+                        <div class="col-xl-12 ">
+                            <div class="footer-copy-right text-right">
+                                <center><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                  Copyright Stitching enhances &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</a>
+                                  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></center>
+
+                              </div>
+                          </div>
+
+
+          <!-- Footer End-->
+          <!-- Map -->
+
+
+</footer>
+<!-- Scroll Up -->
+
+
+<!-- JS here -->
+<script src="./static/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+<!-- Jquery, Popper, Bootstrap -->
+<script src="./static/assets/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="./static/assets/js/popper.min.js"></script>
+<script src="./static/assets/js/bootstrap.min.js"></script>
+<!-- Jquery Mobile Menu -->
+<script src="./static/assets/js/jquery.slicknav.min.js"></script>
+
+<!-- Jquery Slick , Owl-Carousel Plugins -->
+<script src="./static/assets/js/owl.carousel.min.js"></script>
+<script src="./static/assets/js/slick.min.js"></script>
+<!-- One Page, Animated-HeadLin -->
+<script src="./static/assets/js/wow.min.js"></script>
+<script src="./static/assets/js/animated.headline.js"></script>
+<script src="./static/assets/js/jquery.magnific-popup.js"></script>
+
+<!-- Date Picker -->
+<script src="./static/assets/js/gijgo.min.js"></script>
+<!-- Nice-select, sticky -->
+<script src="./static/assets/js/jquery.nice-select.min.js"></script>
+<script src="./static/assets/js/jquery.sticky.js"></script>
+<!-- Progress -->
+<script src="./static/assets/js/jquery.barfiller.js"></script>
+
+<!-- counter , waypoint,Hover Direction -->
+<script src="./static/assets/js/jquery.counterup.min.js"></script>
+<script src="./static/assets/js/waypoints.min.js"></script>
+<script src="./static/assets/js/jquery.countdown.min.js"></script>
+<script src="./static/assets/js/hover-direction-snake.min.js"></script>
+
+<!-- contact js -->
+<script src="./static/assets/js/contact.js"></script>
+<script src="./static/assets/js/jquery.form.js"></script>
+<script src="./static/assets/js/jquery.validate.min.js"></script>
+<script src="./static/assets/js/mail-script.js"></script>
+<script src="./static/assets/js/jquery.ajaxchimp.min.js"></script>
+
+<!-- Jquery Plugins, main Jquery -->
+<script src="./static/assets/js/plugins.js"></script>
+<script src="./static/assets/js/main.js"></script>
+
+</body>
+</html>
